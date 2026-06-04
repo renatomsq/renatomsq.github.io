@@ -32,6 +32,46 @@ theme: minima
 #remote_theme: pages-themes/hacker@v0.2.0
 plugins:
    - jekyll-feed
+prose:
+  rooturl: '_posts'           # pasta onde ficam os posts
+  siteurl: 'https://renatomsq.github.io'  # URL do seu blog
+  media: 'assets/images'     # pasta para upload de imagens
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Título"
+          value: ""
+      - name: "date"
+        field:
+          element: "text"
+          label: "Data"
+          value: "CURRENT_DATETIME"
+      - name: "categories"
+        field:
+          element: "text"
+          label: "Categorias"
+          placeholder: "ex: tecnologia, vida"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          placeholder: "Escolha as tags"
+          options:
+            - name: "Tutorial"
+              value: "tutorial"
+            - name: "Notícia"
+              value: "noticia"
 #  - jekyll-remote-theme
 # Exclude from processing.
 # The following items will not be processed, by default.
